@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Finance Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Personal Finance Tracker</h1>
+
+    <form id="transactionForm">
+      <input type="text" id="title" placeholder="Transaction Title" required />
+      <input type="number" id="amount" placeholder="Amount (e.g., 500)" required />
+      <select id="type" required>
+        <option value="">Select Type</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <div class="summary">
+      <p><strong>Balance:</strong> ₹<span id="balance">0</span></p>
+      <p><strong>Total Income:</strong> ₹<span id="income">0</span></p>
+      <p><strong>Total Expense:</strong> ₹<span id="expense">0</span></p>
+    </div>
+
+    <h2>Transactions</h2>
+    <ul id="transactionList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
